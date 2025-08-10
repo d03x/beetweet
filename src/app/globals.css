@@ -1,0 +1,341 @@
+@import "tailwindcss";
+@import "../assets/css/colors.css";
+@import "tailwind-scrollbar-hide/v4";
+
+:root {
+  --sidebar-width: 310px;
+  --aside-width: 620px;
+  --navbar-height: 2rem;
+  --main-width: calc(100% - var(--sidebar-width));
+}
+
+@theme inline {
+  --font-inter: var(--font-inter);
+  --size-sidebar-width: var(--sidebar-width);
+  --font-inter-bold: var(--font-inter-bold);
+  --aside-width: var(--aside-width);
+  --main-width: var(--main-width);
+  --template-layout: var(--sidebar-width) var(--main-width);
+  --template-layout-md: 100px calc(100% - 100px);
+  --template-layout-xs: 60px calc(100% - 60px);
+  --main-layout-grid: calc(100% - var(--aside-width)) var(--aside-width);
+  --color-primary-outline: var(--beetweet-primary-outline);
+  --size-aside-width: var(--aside-width);
+  --color-hovered-background: var(--beetweet-hovered-background);
+  --color-pressed-background: var(--beetweet-pressed-background);
+
+  --color-primary-50: var(--fds-blue-05);
+  --color-primary-100: var(--highlight-bg);
+  --color-primary-200: var(--fds-blue-30);
+  --color-primary-300: var(--fds-blue-40);
+  --color-primary-400: var(--fds-highlight);
+  --color-primary-500: var(--base-blue);
+  --color-primary-600: var(--primary-button-background);
+  --color-primary-700: var(--fds-blue-70);
+  --color-primary-800: var(--fds-blue-80);
+  --color-primary-900: var(--fds-unified-blue-35);
+
+  --color-gray-0: var(--fds-white);
+  --color-gray-50: var(--fds-gray-00);
+  --color-gray-100: var(--fds-gray-05);
+  --color-gray-150: var(--web-wash);
+  --color-gray-200: var(--fds-gray-10);
+  --color-gray-250: var(--wash);
+  --color-gray-300: var(--fds-gray-20);
+  --color-gray-350: var(--divider);
+  --color-gray-400: var(--fds-gray-30);
+  --color-gray-450: var(--always-gray-75);
+  --color-gray-500: var(--fds-gray-45);
+  --color-gray-600: var(--always-gray-40);
+  --color-gray-700: var(--fds-gray-70);
+  --color-gray-800: var(--fds-gray-80);
+  --color-gray-850: var(--fds-unified-gray-20);
+  --color-gray-900: var(--fds-gray-90);
+  --color-gray-950: var(--fds-gray-100);
+  --color-gray-1000: var(--primary-text);
+
+  --color-dark-gray-350: var(--fds-dark-mode-gray-35);
+  --color-dark-gray-500: var(--fds-dark-mode-gray-50);
+  --color-dark-gray-700: var(--fds-dark-mode-gray-70);
+  --color-dark-gray-800: var(--fds-dark-mode-gray-80);
+  --color-dark-gray-900: var(--fds-dark-mode-gray-90);
+  --color-dark-gray-950: var(--fds-dark-mode-gray-100);
+
+  --color-accent: var(--accent);
+  --color-accent-blue: var(--blue-link);
+  --color-accent-cherry: var(--base-cherry);
+  --color-accent-grape: var(--base-grape);
+  --color-accent-lemon: var(--base-lemon);
+  --color-accent-lime: var(--base-lime);
+  --color-accent-pink: var(--base-pink);
+  --color-accent-seafoam: var(--base-seafoam);
+  --color-accent-teal: var(--base-teal);
+  --color-accent-tomato: var(--base-tomato);
+  --color-accent-orange: var(--fds-yellow-20);
+
+  --color-positive: var(--positive);
+  --color-positive-light: var(--fds-green-55);
+  --color-positive-lighter: var(--fds-green-65);
+  --color-positive-background: var(--positive-background);
+  --color-tooltip-background: var(--color-tooltip-background);
+  --shadow-tooltip-box-shadow: 0px 0px 9px var(--beetweet-box-shadow-04);
+  --color-negative: var(--negative);
+  --color-negative-light: var(--fds-red-55);
+  --color-negative-critical: var(--notification-badge);
+  --color-negative-background: var(--negative-background);
+
+  --color-warning: var(--warning);
+  --color-warning-background: var(--text-badge-attention-background);
+  --color-popover-card-background: var(--popover-card-background);
+  --color-background: var(--surface-background);
+  --color-background-deemphasized: var(--background-deemphasized);
+  --color-beetweet-menu-outline: var(--beetweet-menu-outline);
+  --color-background-flat: var(--card-background-flat);
+  --color-background-comment: var(--comment-background);
+  --color-background-comment-footer: var(--comment-footer-background);
+  --color-background-attachment-footer: var(--attachment-footer-background);
+  --color-background-hero-banner: var(--hero-banner-background);
+  --color-background-nav-bar: var(--nav-bar-background);
+  --color-background-popover: var(--popover-background);
+  --color-background-toast: var(--toast-background);
+  --color-background-tooltip: var(--tooltip-background);
+  --color-background-messenger: var(--messenger-card-background);
+  --color-background-messenger-reply: var(--messenger-reply-background);
+  --color-background-new-notification: var(--new-notification-background);
+  --color-background-toggle-active: var(--toggle-active-background);
+  --color-background-input: var(--input-background);
+  --color-background-input-disabled: var(--input-background-disabled);
+  --color-secondary-background: var(--beetweet-secondary-background);
+  --color-primary-background: var(--beetweet-primary-background);
+
+  --color-text-primary: var(--primary-text);
+  --color-betweet-primary-text: var(--beetweet-primary-text);
+  --color-betweet-secondary-text: var(--beetweet-secondary-text);
+  --color-text-secondary: var(--secondary-text);
+  --color-navigation-hover-background: var(
+    --beetweet-navigation-item-hover-background
+  );
+  --color-text-disabled: var(--disabled-text);
+  --color-text-placeholder: var(--placeholder-text);
+  --color-text-inverse: var(--inverse-text);
+  --color-text-section-header: var(--section-header-text);
+  --color-text-on-media: var(--primary-text-on-media);
+  --color-text-secondary-on-media: var(--secondary-text-on-media);
+  --color-text-placeholder-on-media: var(--placeholder-text-on-media);
+  --color-text-outside-label: var(--text-input-outside-label);
+  --color-text-toast: var(--toast-text);
+  --color-text-toast-link: var(--toast-text-link);
+  --color-navigation-icon: var(--beetweet-navigation-icon);
+  --color-button-primary-background: var(--primary-button-background);
+  --color-button-primary-text: var(--primary-button-text);
+  --color-button-primary-icon: var(--primary-button-icon);
+  --color-button-primary-pressed: var(--primary-button-pressed);
+  --color-button-secondary-background: var(--secondary-button-background);
+  --color-button-secondary-background-floating: var(
+    --secondary-button-background-floating
+  );
+  --color-button-secondary-background-on-dark: var(
+    --secondary-button-background-on-dark
+  );
+  --color-button-secondary-text: var(--secondary-button-text);
+  --color-button-secondary-stroke: var(--secondary-button-stroke);
+  --color-button-secondary-pressed: var(--secondary-button-pressed);
+  --color-button-primary-deemphasized-background: var(
+    --primary-deemphasized-button-background
+  );
+  --color-button-primary-deemphasized-text: var(
+    --primary-deemphasized-button-text
+  );
+  --color-button-primary-deemphasized-pressed: var(
+    --primary-deemphasized-button-pressed
+  );
+  --color-button-primary-deemphasized-pressed-overlay: var(
+    --primary-deemphasized-button-pressed-overlay
+  );
+  --color-button-disabled-background: var(--disabled-button-background);
+  --color-button-disabled-text: var(--disabled-button-text);
+
+  --color-icon-primary: var(--primary-icon);
+  --color-icon-secondary: var(--secondary-icon);
+  --color-icon-disabled: var(--disabled-icon);
+  --color-icon-placeholder: var(--placeholder-icon);
+  --color-icon-glimmer-spinner: var(--glimmer-spinner-icon);
+  --color-icon-list-cell-chevron: var(--list-cell-chevron);
+
+  --color-border: var(--divider);
+  --color-border-focused: var(--border-focused);
+  --color-border-input: var(--input-border-color);
+  --color-border-input-hover: var(--input-border-color-hover);
+  --color-border-popover: var(--popover-border-color);
+  --color-border-toast: var(--toast-border-color);
+  --color-border-media-inner: var(--media-inner-border);
+  --color-border-media-outer: var(--media-outer-border);
+
+  --color-overlay-hover: var(--hover-overlay);
+  --color-overlay-press: var(--press-overlay);
+  --color-overlay-media-hover: var(--media-hover);
+  --color-overlay-media-pressed: var(--media-pressed);
+  --color-overlay-non-media-pressed: var(--non-media-pressed);
+  --color-overlay-non-media-pressed-on-dark: var(--non-media-pressed-on-dark);
+  --color-overlay-on-media: var(--overlay-on-media);
+  --color-overlay-alpha-80: var(--overlay-alpha-80);
+  --color-overlay-always-dark: var(--always-dark-overlay);
+  --color-overlay-always-light: var(--always-light-overlay);
+
+  --color-shadow-1: var(--shadow-1);
+  --color-shadow-2: var(--shadow-2);
+  --color-shadow-5: var(--shadow-5);
+  --color-shadow-8: var(--shadow-8);
+  --color-shadow-inset: var(--shadow-inset);
+
+  --color-highlight: var(--fds-highlight);
+  --color-highlight-bg: var(--highlight-bg);
+  --color-highlight-text: var(--text-highlight);
+  --color-highlight-cell: var(--fds-highlight-cell-background);
+
+  --color-focus-ring: var(--focus-ring-blue);
+  --color-focus-web: var(--primary-web-focus-indicator);
+
+  --color-black: var(--fds-black);
+  --color-black-alpha-05: var(--fds-black-alpha-05);
+  --color-black-alpha-10: var(--fds-black-alpha-10);
+  --color-black-alpha-15: var(--fds-black-alpha-15);
+  --color-black-alpha-20: var(--fds-black-alpha-20);
+  --color-black-alpha-30: var(--fds-black-alpha-30);
+  --color-black-alpha-40: var(--fds-black-alpha-40);
+  --color-black-alpha-50: var(--fds-black-alpha-50);
+  --color-black-alpha-60: var(--fds-black-alpha-60);
+  --color-black-alpha-80: var(--fds-black-alpha-80);
+
+  --color-white: var(--fds-white);
+  --color-white-alpha-05: var(--fds-white-alpha-05);
+  --color-white-alpha-10: var(--fds-white-alpha-10);
+  --color-white-alpha-20: var(--fds-white-alpha-20);
+  --color-white-alpha-30: var(--fds-white-alpha-30);
+  --color-white-alpha-40: var(--fds-white-alpha-40);
+  --color-white-alpha-50: var(--fds-white-alpha-50);
+  --color-white-alpha-60: var(--fds-white-alpha-60);
+  --color-white-alpha-80: var(--fds-white-alpha-80);
+
+  --font-family-system: var(--font-family-system-fds);
+  --font-family-apple: var(--font-family-apple);
+  --font-family-segoe: var(--font-family-segoe);
+  --font-family-default: var(--font-family-default);
+  --font-family-mono: var(--font-family-code);
+
+  --radius-button: var(--button-corner-radius);
+  --radius-button-md: var(--button-corner-radius-medium);
+  --radius-button-lg: var(--button-corner-radius-large);
+  --radius-card: var(--card-corner-radius);
+  --radius-chip: var(--chip-corner-radius);
+  --radius-dialog: var(--dialog-corner-radius);
+  --radius-glimmer: var(--glimmer-corner-radius);
+  --radius-image: var(--image-corner-radius);
+  --radius-input: var(--input-corner-radius);
+  --radius-list-cell: var(--list-cell-corner-radius);
+  --radius-nav-list-cell: var(--nav-list-cell-corner-radius);
+  --radius-comment-bubble: var(--comment-bubble);
+  --radius-chat-bubble: var(--chat-bubble-border-radius);
+  --radius-text-badge: var(--text-badge-corner-radius);
+  --radius-toast: var(--toast-corner-radius);
+  --radius-tooltip: var(--tooltip-corner-radius);
+  --radius-alert-banner: var(--alert-banner-corner-radius);
+  --radius-infochip-md: var(--infochip-medium-radius);
+  --radius-messenger-card: var(--messenger-card-corner-radius);
+  --radius-menu-item-overlay: var(--menu-item-base-overlay-radius);
+
+  --spacing-button-h-lg: var(--button-padding-horizontal-large);
+  --spacing-button-h-md: var(--button-padding-horizontal-medium);
+  --spacing-button-icon: var(--button-padding-icon-only);
+  --spacing-card-h: var(--card-padding-horizontal);
+  --spacing-card-v: var(--card-padding-vertical);
+  --spacing-list-cell-v: var(--list-cell-padding-vertical);
+  --spacing-list-cell-v-addon: var(--list-cell-padding-vertical-with-addon);
+  --spacing-nav-list-cell-v: var(--nav-list-cell-padding-vertical);
+  --spacing-nav-list-cell-v-addon: var(
+    --nav-list-cell-padding-vertical-with-addon
+  );
+  --spacing-text-input-v: var(--text-input-padding-vertical);
+  --spacing-text-badge-h: var(--text-badge-padding-horizontal);
+  --spacing-text-badge-v: var(--text-badge-padding-vertical);
+  --spacing-chat-bubble-h: var(--chat-bubble-padding-horizontal);
+  --spacing-chat-bubble-v: var(--chat-bubble-padding-vertical);
+  --spacing-messenger-card: var(--messenger-card-spacing);
+  --spacing-section-header-v: var(--section-header-padding-vertical);
+  --spacing-page-footer-v: var(--page-footer-padding-vertical);
+  --spacing-menu-item-h: var(--menu-item-base-padding-horizontal);
+  --spacing-menu-item-v: var(--menu-item-base-padding-vertical);
+  --spacing-toast-container-h: var(--toast-container-padding-horizontal);
+  --spacing-toast-container-v: var(--toast-container-padding-vertical);
+  --spacing-toast-addon-h: var(--toast-addon-padding-horizontal);
+  --spacing-toast-addon-v: var(--toast-addon-padding-vertical);
+
+  --size-button-lg: var(--button-height-large);
+  --size-button-md: var(--button-height-medium);
+  --size-blueprint-button-md: var(--blueprint-button-height-medium);
+  --size-blueprint-button-lg: var(--blueprint-button-height-large);
+  --size-list-cell-min: var(--list-cell-min-height);
+  --size-tab: var(--tab-height);
+  --size-messenger-card-min: var(--messenger-card-min-width);
+  --size-messenger-card-max: var(--messenger-card-max-width);
+  --size-messenger-sidebar-collapsed: var(--messenger-sidebar-collapsed-width);
+  --size-messenger-sidebar-expanded: var(--messenger-sidebar-expanded-width);
+  --size-toaster-max: var(--toaster-view-max-width);
+  --size-messenger-app-max: var(--messenger-application-max-width);
+  --size-toast-container-max: var(--toast-container-max-width);
+  --size-toast-container-min: var(--toast-container-min-width);
+  --size-navbar: var(--navbar-height);
+  --shadow-base: var(--shadow-base);
+  --shadow-elevated: var(--shadow-elevated);
+  --shadow-emphasis: var(--shadow-emphasis);
+  --shadow-on-media: var(--shadow-on-media);
+  --shadow-persistent: var(--shadow-persistent);
+  --shadow-primary: var(--shadow-primary);
+  --shadow-responsive: var(--shadow-responsive);
+  --shadow-card: var(--card-box-shadow);
+  --shadow-messenger-card: var(--messenger-card-box-shadow);
+  --shadow-tooltip: var(--tooltip-box-shadow);
+  --shadow-scroll: var(--scroll-shadow);
+  --shadow-focus-default: var(--focus-ring-shadow-default);
+  --shadow-focus-inset: var(--focus-ring-shadow-inset);
+
+  --animate-soft: var(--fds-soft);
+  --animate-strong: var(--fds-strong);
+  --animate-enter-exit-in: var(--fds-animation-enter-exit-in);
+  --animate-enter-exit-out: var(--fds-animation-enter-exit-out);
+  --animate-move-in: var(--fds-animation-move-in);
+  --animate-move-out: var(--fds-animation-move-out);
+  --animate-passive-move-in: var(--fds-animation-passive-move-in);
+  --animate-passive-move-out: var(--fds-animation-passive-move-out);
+  --animate-quick-move-in: var(--fds-animation-quick-move-in);
+  --animate-quick-move-out: var(--fds-animation-quick-move-out);
+  --animate-fade-in: var(--fds-animation-fade-in);
+  --animate-fade-out: var(--fds-animation-fade-out);
+
+  --animate-duration-fast: var(--fds-fast);
+  --animate-duration-slow: var(--fds-slow);
+  --animate-duration-extra-extra-short-in: var(
+    --fds-duration-extra-extra-short-in
+  );
+  --animate-duration-extra-extra-short-out: var(
+    --fds-duration-extra-extra-short-out
+  );
+  --animate-duration-extra-short-in: var(--fds-duration-extra-short-in);
+  --animate-duration-extra-short-out: var(--fds-duration-extra-short-out);
+  --animate-duration-short-in: var(--fds-duration-short-in);
+  --animate-duration-short-out: var(--fds-duration-short-out);
+  --animate-duration-medium-in: var(--fds-duration-medium-in);
+  --animate-duration-medium-out: var(--fds-duration-medium-out);
+  --animate-duration-long-in: var(--fds-duration-long-in);
+  --animate-duration-long-out: var(--fds-duration-long-out);
+  --animate-duration-extra-long-in: var(--fds-duration-extra-long-in);
+  --animate-duration-extra-long-out: var(--fds-duration-extra-long-out);
+  --animate-duration-none: var(--fds-duration-none);
+
+  --border-width-input: var(--input-border-width);
+  --border-width-tab-underline: var(--tab-underline-height);
+}
+
+body {
+  font-family: var(--font-inter);
+}
