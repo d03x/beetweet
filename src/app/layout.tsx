@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { TRPCProvider } from "@/trpc/client";
-import { Popup } from "@/components/Popup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

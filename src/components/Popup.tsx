@@ -80,12 +80,7 @@ const Popup = ({ children, actionType = "hover" }: PopupProps) => {
       document.addEventListener("mouseover", handleOutsideClick);
       triggerRef?.current?.addEventListener("mouseover", hoverListener);
     }
-
     function handleOutsideClick(e: MouseEvent) {
-      console.log(e.target);
-
-      console.log(contentRef?.current);
-
       if (
         triggerRef?.current &&
         contentRef?.current &&

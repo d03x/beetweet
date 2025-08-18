@@ -49,7 +49,7 @@ const Inner = ({ children }: { children: ReactNode }) => {
 
 const Aside = ({ children }: { children: ReactNode }) => {
   const ctx = useMainLayoutContext();
-  return <div className="border-l scrollbar-hide  max-h-screen min-h-screen overflow-y-auto sticky top-0 w-(--aside-width) border-primary-outline">{children}</div>;
+  return <div className="border-l hidden md:flex flex-col scrollbar-hide  max-h-screen min-h-screen overflow-y-auto sticky top-0 w-(--aside-width) border-primary-outline">{children}</div>;
 };
 const Main = ({ children }: { children: ReactNode }) => {
   return <div className="w-full">{children}</div>;
