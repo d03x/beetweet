@@ -2,7 +2,9 @@
 import { BackIcon, CloseIcon, SearchIcon } from "@/components/icon";
 import Layout from "@/components/Layout";
 import { Popup } from "@/components/Popup";
+import TestComponnets from "@/components/TestComponent";
 import Popover from "@/components/UI/Popover";
+import CreatePost from "@/features/create-post/components/CreatePost";
 import { HomeNavbar } from "@/features/navbar";
 import ProfileName from "@/features/profile/ProfileName";
 import { Search } from "@/features/search";
@@ -68,21 +70,7 @@ export const ClientPage = () => {
         <Layout.Main>
           <HomeNavbar />
           <Layout.Main.Inner>
-           <div className="p-3">
-             {[1, 2, 3].map((_, index) => (
-              <TwitterPost
-                key={index}
-                name={faker.person.fullName()}
-                nickname={faker.internet.userName().toLowerCase()}
-                content={faker.lorem.paragraph(10)}
-                image={
-                  index % 2 === 0
-                    ? faker.image.url()
-                    : null
-                }
-              />
-            ))}
-           </div>
+            <CreatePost/>
           </Layout.Main.Inner>
         </Layout.Main>
         <Layout.Aside>

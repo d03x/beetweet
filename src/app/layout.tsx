@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { TRPCProvider } from "@/trpc/client";
+import 'react-circular-progressbar/dist/styles.css';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${interBold.variable} ${geistMono.variable} ${interFont.variable} antialiased text-betweet-primary-text bg-primary-background font-inter`}
       >

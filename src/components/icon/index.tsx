@@ -11,4 +11,8 @@ export * from "./Emoji";
 export * from "./Info";
 export * from "./Share";
 export * from "./Search";
+export * from "./Calendar"
 export * from "./Close";
+export * from "./Globe"
+export * from "./Media"
+export * from "./Lists"
