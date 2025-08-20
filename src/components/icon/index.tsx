@@ -16,3 +16,4 @@ export * from "./Close";
 export * from "./Globe"
 export * from "./Media"
 export * from "./Lists"
+export * from "./Mention"

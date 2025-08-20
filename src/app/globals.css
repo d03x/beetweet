@@ -112,9 +112,7 @@
   --color-betweet-primary-text: var(--beetweet-primary-text);
   --color-betweet-secondary-text: var(--beetweet-secondary-text);
   --color-text-secondary: var(--secondary-text);
-  --color-navigation-hover-background: var(
-    --beetweet-navigation-item-hover-background
-  );
+  --color-navigation-hover-background: var(--beetweet-navigation-item-hover-background);
   --color-text-disabled: var(--disabled-text);
   --color-text-placeholder: var(--placeholder-text);
   --color-text-inverse: var(--inverse-text);
@@ -131,27 +129,15 @@
   --color-button-primary-icon: var(--primary-button-icon);
   --color-button-primary-pressed: var(--primary-button-pressed);
   --color-button-secondary-background: var(--secondary-button-background);
-  --color-button-secondary-background-floating: var(
-    --secondary-button-background-floating
-  );
-  --color-button-secondary-background-on-dark: var(
-    --secondary-button-background-on-dark
-  );
+  --color-button-secondary-background-floating: var(--secondary-button-background-floating);
+  --color-button-secondary-background-on-dark: var(--secondary-button-background-on-dark);
   --color-button-secondary-text: var(--secondary-button-text);
   --color-button-secondary-stroke: var(--secondary-button-stroke);
   --color-button-secondary-pressed: var(--secondary-button-pressed);
-  --color-button-primary-deemphasized-background: var(
-    --primary-deemphasized-button-background
-  );
-  --color-button-primary-deemphasized-text: var(
-    --primary-deemphasized-button-text
-  );
-  --color-button-primary-deemphasized-pressed: var(
-    --primary-deemphasized-button-pressed
-  );
-  --color-button-primary-deemphasized-pressed-overlay: var(
-    --primary-deemphasized-button-pressed-overlay
-  );
+  --color-button-primary-deemphasized-background: var(--primary-deemphasized-button-background);
+  --color-button-primary-deemphasized-text: var(--primary-deemphasized-button-text);
+  --color-button-primary-deemphasized-pressed: var(--primary-deemphasized-button-pressed);
+  --color-button-primary-deemphasized-pressed-overlay: var(--primary-deemphasized-button-pressed-overlay);
   --color-button-disabled-background: var(--disabled-button-background);
   --color-button-disabled-text: var(--disabled-button-text);
 
@@ -252,9 +238,7 @@
   --spacing-list-cell-v: var(--list-cell-padding-vertical);
   --spacing-list-cell-v-addon: var(--list-cell-padding-vertical-with-addon);
   --spacing-nav-list-cell-v: var(--nav-list-cell-padding-vertical);
-  --spacing-nav-list-cell-v-addon: var(
-    --nav-list-cell-padding-vertical-with-addon
-  );
+  --spacing-nav-list-cell-v-addon: var(--nav-list-cell-padding-vertical-with-addon);
   --spacing-text-input-v: var(--text-input-padding-vertical);
   --spacing-text-badge-h: var(--text-badge-padding-horizontal);
   --spacing-text-badge-v: var(--text-badge-padding-vertical);
@@ -314,12 +298,8 @@
 
   --animate-duration-fast: var(--fds-fast);
   --animate-duration-slow: var(--fds-slow);
-  --animate-duration-extra-extra-short-in: var(
-    --fds-duration-extra-extra-short-in
-  );
-  --animate-duration-extra-extra-short-out: var(
-    --fds-duration-extra-extra-short-out
-  );
+  --animate-duration-extra-extra-short-in: var(--fds-duration-extra-extra-short-in);
+  --animate-duration-extra-extra-short-out: var(--fds-duration-extra-extra-short-out);
   --animate-duration-extra-short-in: var(--fds-duration-extra-short-in);
   --animate-duration-extra-short-out: var(--fds-duration-extra-short-out);
   --animate-duration-short-in: var(--fds-duration-short-in);
@@ -338,4 +318,13 @@
 
 body {
   font-family: var(--font-inter);
+}
+
+
+.show-placheolder::before {
+  content: attr(data-placeholder);
+  color: #6b7280;
+  position: absolute;
+  opacity: 0.5;
+  pointer-events: none;
 }
