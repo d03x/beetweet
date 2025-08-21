@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { Popup } from "@/components/Popup";
 import TestComponnets from "@/components/TestComponent";
 import Popover from "@/components/UI/Popover";
+import Composer from "@/features/composer";
 import CreatePost from "@/features/create-post/components/CreatePost";
 import { HomeNavbar } from "@/features/navbar";
 import ProfileName from "@/features/profile/ProfileName";
@@ -70,7 +71,7 @@ export const ClientPage = () => {
         <Layout.Main>
           <HomeNavbar />
           <Layout.Main.Inner>
-            <CreatePost/>
+            <Composer/>
           </Layout.Main.Inner>
         </Layout.Main>
         <Layout.Aside>

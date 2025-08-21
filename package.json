@@ -10,6 +10,15 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.83.0",
+    "@tiptap/core": "^3.2.0",
+    "@tiptap/extension-mention": "^3.2.0",
+    "@tiptap/extension-paragraph": "^3.2.0",
+    "@tiptap/extension-text": "^3.2.0",
+    "@tiptap/extension-text-style": "^3.2.0",
+    "@tiptap/extensions": "^3.2.0",
+    "@tiptap/pm": "^3.2.0",
+    "@tiptap/react": "^3.2.0",
+    "@tiptap/starter-kit": "^3.2.0",
     "@trpc/client": "^11.4.3",
     "@trpc/react-query": "^11.4.3",
     "@trpc/server": "^11.4.3",
@@ -32,6 +41,7 @@
     "superjson": "^2.2.2",
     "tailwind-merge": "^3.3.1",
     "tailwind-scrollbar-hide": "^4.0.0",
+    "tippy.js": "^6.3.7",
     "zod": "^4.0.10"
   },
   "devDependencies": {

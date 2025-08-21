@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { useCreatePostContext } from "../contexts/CreatePostContextProvider";
 import { Btn } from "./Btn";
 import { SelectVisibility } from "./SelectVisibility";
+import { TextInput } from "./text-input";
 let maxWords = 350;
 export const CreatePostCompose = () => {
 
@@ -23,7 +24,7 @@ export const CreatePostCompose = () => {
         <div className="flex items-start  gap-x-2">
             <Avatar />
             <div className="flex   flex-col flex-1">
-                <CreatePostFormContent />
+                <TextInput />
                 <div className="flex  border-t items-center mt-4  py-4 border-primary-outline">
                     <SelectVisibility />
                     <div className="flex ml-2 text-button-primary-background/55 items-center">

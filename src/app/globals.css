@@ -328,3 +328,33 @@ body {
   opacity: 0.5;
   pointer-events: none;
 }
+
+p.is-editor-empty:first-child::before {
+  color: var(--color-text-secondary);
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.tiptap a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--color-blue-500)
+}
+
+.suggestion {
+  color: var(--color-blue-500);
+}
+
+.mention {
+  background-color: var(--color-purple-400);
+  border-radius: 0.4rem;
+  box-decoration-break: clone;
+  color: var(--purple);
+  padding: 0.1rem 0.3rem;
+
+  &::after {
+    content: '\200B';
+  }
+}
