@@ -2,15 +2,23 @@ import { Calendar, EmojiIconLine, Lists, Media, MediaGif } from "@/components/ic
 import { SelectVisibility } from "../SelectVisibility";
 import { Btn } from "./Btn";
 import { WordMeter } from "./word-meter";
+import { SelectMediaBtn } from "../MediaSelect";
+import { useComposer } from "../contexts/ComposerContextProvider";
 type FooterProps = {
     remainderTextWords: number;
     remainderTextPercentage: number;
     maxwordCount: number,
 }
 export const Footer = ({ remainderTextWords, maxwordCount, remainderTextPercentage }: FooterProps) => {
+    const ctx = useComposer();
+    function onSelectFile(file: FileList) {
+        ctx.setMediaAssets(file);
+    }
     return <div className="flex items-center justify-between py-3 border-t border-primary-outline">
         <div className="flex space-x-2">
-            <Btn icon={Media} />
+            <SelectMediaBtn
+                onSelectFile={onSelectFile}
+            />
             <Btn icon={MediaGif} />
             <Btn icon={EmojiIconLine} />
             <Btn icon={Lists} />

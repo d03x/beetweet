@@ -5,7 +5,8 @@ import { TextInput } from "./text-input/text-input"
 import { Footer } from "./components/footer";
 import { Avatar } from "../profile/Avatar";
 import { SelectVisibility } from "./SelectVisibility";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { faker } from "@faker-js/faker";
 
 const Composer = () => {
     const ctx = useComposer();
@@ -24,11 +25,20 @@ const Composer = () => {
         setShowVisibilityBtn(false);
 
     }
+
+    useEffect(() => {
+        console.log(ctx.mediaAssets);
+
+    }, [ctx.mediaAssets])
+
     return <div className="flex p-3 items-start">
         <div className="flex-1">
             <div className="flex items-start">
                 <Avatar />
                 <TextInput onBlur={onBlur} onFocus={onFocus} maxWords={ctx.maxWords} onTextChange={onTextChange} /></div>
+            <div className="my-3 grid grid-cols-2">
+           
+            </div>
             <div className="mt-3  space-y-2">
                 <Footer
                     maxwordCount={ctx.maxWords}

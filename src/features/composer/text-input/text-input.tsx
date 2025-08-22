@@ -8,8 +8,8 @@ import Mention from "@tiptap/extension-mention";
 import { TextStyle, FontSize } from "@tiptap/extension-text-style"
 import { useEffect } from "react";
 import { wordLimitHighlight } from "../extensions/wordLimitHighlight";
-export const TextInput = ({ onTextChange, onFocus, maxWords,onBlur }: {
-    onBlur?:()=>void,
+export const TextInput = ({ onTextChange, onFocus, maxWords, onBlur }: {
+    onBlur?: () => void,
     onTextChange: (html: string, plain?: string) => void;
     onFocus?: () => void,
     maxWords: number,
@@ -19,7 +19,7 @@ export const TextInput = ({ onTextChange, onFocus, maxWords,onBlur }: {
         autofocus: 'end',
         injectCSS: true,
         onFocus: onFocus,
-        onBlur : onBlur,
+        onBlur: onBlur,
         extensions: [
             wordLimitHighlight.configure({
                 maxWords,

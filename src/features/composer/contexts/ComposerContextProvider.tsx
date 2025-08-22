@@ -5,7 +5,9 @@ type ComposerContextProviderType = {
     richText: string,
     plainText: string,
     remainderTextPercentage: number,
+    mediaAssets: FileList | null,
     setRichText: (a: any) => void,
+    setMediaAssets:(file : FileList)=>void,
     setPlainText: (a: any) => void,
     setVisibility: (a: any) => void,
     maxWords: number,
@@ -16,8 +18,10 @@ type ComposerContextProviderType = {
 const ComposerProvider = createContext<ComposerContextProviderType>({
     richText: '',
     plainText: '',
+    mediaAssets: null,
     remainderTextPercentage: 0,
     maxWords: 60,
+    setMediaAssets() {},
     visibility: 'everyone',
     setVisibility() { },
     remainderTextWord: 0,
@@ -33,7 +37,7 @@ const ComposerContextProvider = ({ children }: { children: ReactNode }) => {
 
     const [maxWords, setMaxWords] = useState<number>(60)
     const [visibility, setVisibility] = useState<ComposerContextProviderType['visibility']>('everyone')
-
+    const [mediaAssets, setMediaAssets] = useState<FileList|null>(null);
     const [remainderTextPercentage, setRemainderTextPercentage] = useState<number>(0)
     const [remainderTextWord, setRemainderTextWord] = useState<number>(0)
     useEffect(() => {
@@ -49,7 +53,7 @@ const ComposerContextProvider = ({ children }: { children: ReactNode }) => {
         setRemainderTextWord(maxWords)
     }, [maxWords])
 
-    return <ComposerProvider.Provider value={{ plainText, richText, setRichText, setPlainText, setVisibility, visibility, remainderTextPercentage, remainderTextWord, maxWords }}>
+    return <ComposerProvider.Provider value={{ plainText,mediaAssets,setMediaAssets, richText, setRichText, setPlainText, setVisibility, visibility, remainderTextPercentage, remainderTextWord, maxWords }}>
         {children}
     </ComposerProvider.Provider>
 }

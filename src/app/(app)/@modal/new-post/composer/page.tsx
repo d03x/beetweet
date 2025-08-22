@@ -41,7 +41,7 @@ const ComposerModalNewPost = () => {
                     className="max-w-sm lg:max-w-md lg:min-w-sm min-w-xs border border-primary-outline rounded-md bg-background  mx-auto">
                     <div className="flex border-b border-primary-outline items-center  px-4 py-2">
                         <button className="bg-background-messenger text-sm cursor-pointer">Cancel</button>
-                        <h1 className="font-semibold text-sm md:text-md text-text-secondary mx-auto">New Post</h1>
+                        <div className="font-semibold text-sm md:text-md text-text-secondary mx-auto">New Post</div>
                         <button className="bg-background-messenger text-sm cursor-pointer">Save</button>
                     </div>
                     <Composer />
