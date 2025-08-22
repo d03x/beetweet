@@ -25,10 +25,7 @@ const wordLimitHighlight = Extension.create<CustomExtensionOptions>({
                     decorations(state) {
                         const text = state.doc.textBetween(0, state.doc.content.size, undefined, '\n');
                         const words = text.split(/\s+/).filter(Boolean);
-                        console.log(words);
-
                         const decorations: Decoration[] = [];
-
                         if (words.length + 1 > maxWords) {
                             let wordCount = 0;
                             let pos = 0;
