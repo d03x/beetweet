@@ -1,7 +1,7 @@
-import { CreatePostContextProviderType } from "../contexts/CreatePostContextProvider";
+import { ComposerContextProviderType } from "../contexts/ComposerContextProvider";
 
-export function trans(text: CreatePostContextProviderType['visibility']) {
-    let key: CreatePostContextProviderType['visibility'] = text.toLowerCase() as CreatePostContextProviderType['visibility'];
+export function trans(text: ComposerContextProviderType['visibility']) {
+    let key: ComposerContextProviderType['visibility'] = text.toLowerCase() as ComposerContextProviderType['visibility'];
     switch (key) {
         case 'everyone':
             return "Semua Orang"

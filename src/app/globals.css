@@ -23,7 +23,7 @@
   --size-aside-width: var(--aside-width);
   --color-hovered-background: var(--beetweet-hovered-background);
   --color-pressed-background: var(--beetweet-pressed-background);
-
+  --color-beetweet-dark-backdrop-background:var(--beetweet-dark-backdrop-background);
   --color-primary-50: var(--fds-blue-05);
   --color-primary-100: var(--highlight-bg);
   --color-primary-200: var(--fds-blue-30);

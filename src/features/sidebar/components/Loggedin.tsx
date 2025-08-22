@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { NewPostIcon } from "../assets/icons/Pencil";
 import image from "../../../../public/unnamed.jpg";
+import Link from "next/link";
 
 export const Loggedin = () => {
   return (
@@ -14,10 +15,10 @@ export const Loggedin = () => {
         src={image}
       />
 
-      <button className="w-full flex items-center justify-center space-x-2 active:bg-button-primary-pressed cursor-pointer disabled:text-button-disabled-text disabled:bg-button-disabled-background py-2.5 font-semibold rounded-full text-button-primary-text text-xs bg-button-primary-background">
+      <Link href={'/new-post/composer'} className="w-full flex items-center justify-center space-x-2 active:bg-button-primary-pressed cursor-pointer disabled:text-button-disabled-text disabled:bg-button-disabled-background py-2.5 font-semibold rounded-full text-button-primary-text text-xs bg-button-primary-background">
         <NewPostIcon width={17} height={17} />
         <span> New Posts</span>
-      </button>
+      </Link>
     </div>
   );
 };

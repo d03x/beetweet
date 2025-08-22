@@ -14,14 +14,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 const interFont = Inter({
-  variable : "--font-inter",
-  subsets : ['latin'],
-  weight : "400"
+  variable: "--font-inter",
+  subsets: ['latin'],
+  weight: "400"
 })
 const interBold = Inter({
-  variable : "--font-inter-bold",
-  subsets : ['latin'],
-  weight : "600"
+  variable: "--font-inter-bold",
+  subsets: ['latin'],
+  weight: "600"
 })
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,8 +33,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+ 
+
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <body
         className={`${geistSans.variable} ${interBold.variable} ${geistMono.variable} ${interFont.variable} antialiased text-betweet-primary-text bg-primary-background font-inter`}
       >

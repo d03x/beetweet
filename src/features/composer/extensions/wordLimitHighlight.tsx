@@ -19,7 +19,6 @@ const wordLimitHighlight = Extension.create<CustomExtensionOptions>({
     },
     addProseMirrorPlugins() {
         const { maxWords } = this.options
-
         return [
             new Plugin({
                 props: {
